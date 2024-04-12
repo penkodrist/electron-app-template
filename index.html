@@ -1,0 +1,44 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Electron App Template</title>
+    <link rel="stylesheet" href="./assets/default.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="appDiv">
+        <div class="titleBarWrapper">
+            <div class="windowName">
+                <img alt="" src="">Electron App Name<span>app version (optional)</span>
+            </div>
+            <div class="windowControls">
+                <div class="close"><img alt="close" src="./assets/icons/windowControlsIcons/close.svg"></div>
+                <div class="maximize"><img alt="close" src="./assets/icons/windowControlsIcons/maximize.svg"></div>
+                <div class="minimize"><img alt="close" src="./assets/icons/windowControlsIcons/minimize.svg"></div>
+            </div>
+        </div>
+        <div class="mainBody">
+            <div class="noProjectBox">
+                <img alt ="" src="./assets/icons/question.svg">
+                <p>Your project will be displayed here</p>
+                <p>To edit Electron settings, go to <code>index.js</code>, located in root of the project</p>
+                <p>If you want to customize window's controls, you can replace icons in <code>assets/icons/windowControlsIcons</code></p>
+                <a class="ext-link">Electron Docs<img alt="" src="./assets/icons/ext-link.svg"><extlink>https://www.electronjs.org/docs/latest</extlink></a>
+                <a class="ext-link">Electron API<img alt="" src="./assets/icons/ext-link.svg"><extlink>https://www.electronjs.org/docs/latest/api/app</extlink></a>
+            </div>
+        </div>
+    </div>
+    <script src="./assets/scripts/windowControls.js"></script>
+    <script>
+        const { shell } = require('electron')
+        const links = document.querySelectorAll('.ext-link')
+        let thisLink
+        links.forEach(function (e) { e.addEventListener('click', openExt)} )
+        function openExt() { thisLink = this.querySelector('extlink').textContent; shell.openExternal(thisLink) }
+    </script>
+</body>
+</html>

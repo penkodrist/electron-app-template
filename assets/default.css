@@ -1,0 +1,155 @@
+:root {
+    --figma-main-background: #2c2c2c;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+html, body {
+    margin: 0;
+    height: 100%;
+    background-color: var(--figma-main-background);
+}
+
+* {
+    font-family: Inter, sans-serif;
+    user-select: none;
+}
+
+.appDiv {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    .titleBarWrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+        width: 100%;
+        height: 31px;
+        background-color: var(--figma-main-background);
+        color: white;
+        .windowName {
+            display: flex;
+            height: 100%;
+            width: 100%;
+            align-items: center;
+            font-size: 0.8rem;
+            padding: 10px;
+            box-sizing: border-box;
+            pointer-events: all;
+            -webkit-app-region: drag;
+            img {
+                width: 16px;
+                height: 16px;
+                margin-right: 10px;
+                background: radial-gradient(rgb(65 65 65), rgb(140 140 140));
+                border-radius: 50%;
+            }
+            span {
+                color: gray;
+                font-size: 0.6rem;
+                margin-left: 10px;
+            }
+        }
+        .windowControls {
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+            height: 100%;
+            width: fit-content;
+            div {
+                overflow: hidden;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                width: 40px;
+                min-width: 40px;
+                height: 100%;
+                transition: .1s ease;
+                img {
+                    width: 12px;
+                    min-width: 12px;
+                    max-width: 12px;
+                    height: 12px;
+                    min-height: 12px;
+                    max-height: 12px;
+                    z-index: 1;
+                }
+            }
+            div:hover {
+                background-color: rgb(75 75 75);
+            }
+            .close:active {
+                background-color: red;
+            }
+            .maximize:active {
+                background-color: cornflowerblue;
+            }
+            .minimize:active {
+                background-color: cornflowerblue;
+            }
+        }
+    }
+    .mainBody {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        .noProjectBox {
+            color: rgb(140 140 140);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 50px 50px;
+            border-radius: 15px;
+            border: 3px solid rgb(70 70 70);
+            code {
+                padding: 3px;
+                background-color: rgb(70 70 70);
+                font-family: JetBrains Mono, monospace;
+                border-radius: 3px;
+                margin-left: 3px;
+                margin-right: 3px;
+            }
+            img {
+                max-height: 120px;
+                max-width: 120px;
+                margin-bottom: 20px;
+            }
+            a {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                font-weight: 700;
+                color: rgb(140 140 140);
+                text-decoration: none;
+                transition: .25s ease;
+                margin-bottom: 5px;
+                cursor: pointer;
+                img {
+                    margin-left: 3px;
+                    margin-bottom: 0;
+                    max-width: 18px;
+                    max-height: 18px;
+                }
+                extlink {
+                    display: none;
+                }
+            }
+            a:hover {
+                color: cornflowerblue;
+            }
+            a:nth-last-child(1) {
+                margin-bottom: 0 !important;
+            }
+        }
+    }
+}
