@@ -8,12 +8,14 @@ const createWindow = () => {
         minHeight: 576,
         frame: false,
         titleBarStyle: 'hidden',
+        fullscreenable: false,
+        fullscreen: false,
         webPreferences: {
             nodeIntegration: true,
             contextIsolation: false,
             devTools: true,
             backgroundThrottling: false,
-            webviewTag: true
+            disableHtmlFullscreenWindowResize: true,
         }
     })
     const { enable } = require('@electron/remote/main');
