@@ -71,12 +71,12 @@ html, body {
                 height: 100%;
                 transition: .1s ease;
                 img {
-                    width: 12px;
-                    min-width: 12px;
-                    max-width: 12px;
-                    height: 12px;
-                    min-height: 12px;
-                    max-height: 12px;
+                    width: 10px;
+                    min-width: 10px;
+                    max-width: 10px;
+                    height: 10px;
+                    min-height: 10px;
+                    max-height: 10px;
                     z-index: 1;
                 }
             }

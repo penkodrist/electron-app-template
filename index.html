@@ -13,7 +13,12 @@
     <div class="appDiv">
         <div class="titleBarWrapper">
             <div class="windowName">
+
+
+<!--                TODO: Add your app icon. It will be displayed in the title bar of the app.-->
                 <img alt="" src="">Electron App Name<span>app version (optional)</span>
+
+
             </div>
             <div class="windowControls">
                 <div class="close"><img alt="close" src="./assets/icons/windowControlsIcons/close.svg"></div>
@@ -36,9 +41,8 @@
     <script>
         const { shell } = require('electron')
         const links = document.querySelectorAll('.ext-link')
-        let thisLink
         links.forEach(function (e) { e.addEventListener('click', openExt)} )
-        function openExt() { thisLink = this.querySelector('extlink').textContent; shell.openExternal(thisLink) }
+        function openExt() { shell.openExternal(this.querySelector('extlink').textContent) }
     </script>
 </body>
 </html>
