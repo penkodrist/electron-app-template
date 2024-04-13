@@ -124,3 +124,6 @@ dist
 
 # IntellijIDEA files
 .idea
+
+# node.js modules
+/node_modules
