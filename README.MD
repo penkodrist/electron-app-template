@@ -7,5 +7,5 @@ After installing all dependencies, type `npm run start` in console to launch the
 
 # Patch Notes
 1.0.2:
-- Disabled the ability to go fullscreen HTML. To re-enable the feature, delete or change the `fullscreenable` and `fullscreen` to `true` lines in `index.js` in window options.
+- Disabled the ability to go fullscreen HTML. To re-enable the feature, delete or change the `fullscreenable` and `fullscreen` to `true` in `index.js` in window's options.
 - Fixed the window controls blur, also redrawn the icons.
